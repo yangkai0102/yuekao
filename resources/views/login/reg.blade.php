@@ -22,7 +22,7 @@
     <div class="login layui-anim layui-anim-up">
         <div class="message">用户注册</div>
         <div id="darkbannerwrap"></div>
-        
+        <a href="{{url('/')}}">登录</a>
         <form method="post" class="layui-form" >
             <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
