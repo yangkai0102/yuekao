@@ -17,4 +17,4 @@
 
 Route::get('/','Login\LoginController@login');
 
-Route::get('/reg','Login\LoginController@reg');
+Route::get('/login/reg','Login\LoginController@reg');
