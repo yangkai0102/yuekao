@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Login;
 use App\Http\Controllers\Controller;
 use App\Login\LoginModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class LoginController extends Controller
 {
@@ -22,8 +23,12 @@ class LoginController extends Controller
 //        dd($res);
         if($res){
             if($pwd==$res['pwd']){
+                $key='yk';
+                Redis::set($key,$username);
                 $url="http://swoole.1548580932.top";
                 return redirect($url);
+            }else{
+                dd("密码错误");
             }
         }else{
             dd('用户名不存在');
@@ -32,5 +37,21 @@ class LoginController extends Controller
 
     public function reg(){
         return view('/login/reg');
+    }
+
+    public function regdo(){
+        $data=request()->input();
+        if(preg_match("/^1[34578]\d{9}$/", $data['tel'])){
+            echo "手机号有误";die;
+        }
+//        dd($data);
+        $res=LoginModel::insert($data);
+        if($res){
+            return redirect('/');
+        }
+    }
+
+    public function index(){
+        return view('/index');
     }
 }

@@ -20,5 +20,9 @@ Route::post('/logindo','Login\LoginController@logindo');
 
 
 Route::get('/login/reg','Login\LoginController@reg');
+Route::post('/regdo','Login\LoginController@regdo');
+
+Route::get('/index','Login\LoginController@index');
+
 
 
