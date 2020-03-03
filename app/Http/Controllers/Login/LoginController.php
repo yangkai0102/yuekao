@@ -25,8 +25,8 @@ class LoginController extends Controller
             if($pwd==$res['pwd']){
                 $key='yk';
                 Redis::set($key,$username);
-                $url="http://swoole.1548580932.top";
-                return redirect($url);
+//                $url="http://swoole.1548580932.top";
+                return redirect("/index");
             }else{
                 dd("密码错误");
             }

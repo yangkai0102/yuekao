@@ -51,12 +51,12 @@
 </script>
 
 <script>
-    <SCRIPT LANGUAGE="JavaScript">
-        <!--
-    var name= '<?php echo $name;?>';
-    alert(name);
-    //-->
-</SCRIPT>
+{{--    <SCRIPT LANGUAGE="JavaScript">--}}
+{{--        <!----}}
+{{--    var name= '<?php echo $name;?>';--}}
+{{--    alert(name);--}}
+{{--    //-->--}}
+{{--</SCRIPT>--}}
 //用户登录以后   获取用户名
 
     var ws=new WebSocket("ws://116.62.15.33:9502");
