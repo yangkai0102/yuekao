@@ -18,8 +18,9 @@
 </head>
 <body>
 <div class="a prism-player" id="player-con" style="width: 60%;">
+
 </div>
-<div style="width: 30%;" class="b">
+<div style="width: 30%;" class="b">粉丝贡献榜
     <div style="width: 350px;height: 420px;border: 1px solid black;overflow-y: auto;"  id="list"></div>
     <input type="text" id="message">
     <input type="button" value="发送" id="btn">
@@ -28,7 +29,7 @@
 
 </div>
 <div style="width: 10%" class="c">
-    <div class="onlinelist" style="border: 1px solid black;height: 50%;">在线列表</div></div>
+    <div class="onlinelist" style="border: 1px solid black;height: 50%;">粉丝在线列表</div></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
@@ -82,6 +83,7 @@
         }
         $(".onlinelist").html(list);
         $("#list").append(content);
+
     }
     $(document).on("click","#btn",function () {
         // console.log(11)
