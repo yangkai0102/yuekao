@@ -97,8 +97,8 @@
     })
 $(document).on("click",".liwu",function () {
     var lid=$(this).prev("span").text();
-    var username=$(this).parent('div').siblings('div').children('#aa').text();
-    // console.log(username)
+    // var username=$(this).parent('div').siblings('div').children('#aa').text();
+    console.log(username)
     $.ajax({
         url:"{{URL("/checkliwu")}}",
         method:"post",
