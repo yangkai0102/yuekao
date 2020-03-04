@@ -41,7 +41,7 @@ class LoginController extends Controller
 
     public function regdo(){
         $data=request()->input();
-        if(preg_match("/^1[34578]\d{9}$/", $data['tel'])){
+        if(!preg_match("/^1[34578]\d{9}$/", $data['tel'])){
             echo "手机号有误";die;
         }
 //        dd($data);
