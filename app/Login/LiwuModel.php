@@ -4,11 +4,9 @@ namespace App\Login;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LoginModel extends Model
+class LiwuModel extends Model
 {
     //
     public $primaryKey='id';
-    public $table='login';
-    public $timestamps=false;
-
+    public $table='liwu';
 }

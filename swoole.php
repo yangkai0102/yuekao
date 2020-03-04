@@ -12,7 +12,7 @@ $ws->on('open', function ($ws, $request) {
 //监听WebSocket消息事件
 $ws->on('message', function ($ws, $frame) {
     $info=json_decode($frame->data,true);
-//    print_r($info);
+    print_r($info);
     if($info['type'] =="login"){
         //swoole提供的redis客户端
         $redis= new Swoole\Coroutine\Redis();

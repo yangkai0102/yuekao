@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Login;
 
 use App\Http\Controllers\Controller;
+use App\Login\LiwuModel;
 use App\Login\LoginModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 
 class LoginController extends Controller
@@ -52,8 +54,25 @@ class LoginController extends Controller
     }
 
     public function index(){
+        $res=LiwuModel::get()->toArray();
+//        dd($res);
         $key="yk";
         $data=Redis::get($key);
-        return view('/index',['data'=>$data]);
+        return view('/index',['data'=>$data,'res'=>$res]);
+    }
+    public function checkliwu(Request $request){
+
+        $id=$request->input('id');
+        $username=$request->input('username');
+//        echo $username;
+        $res=LiwuModel::where('id',$id)->first();
+
+        $res1=LoginModel::where('username',$username)->first();
+//        return $res1;m
+        $data=$res1['mem']+$res['mem'];
+//        return $data;
+
+        $res2=LoginModel::where('username',$username)->update(['mem'=>$data]);
+        echo $res2;
     }
 }

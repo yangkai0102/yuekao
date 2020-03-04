@@ -24,5 +24,8 @@ Route::post('/regdo','Login\LoginController@regdo');
 
 Route::get('/index','Login\LoginController@index');
 
+Route::post('/checkliwu','Login\LoginController@checkliwu');
+
+
 
 
