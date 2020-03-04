@@ -58,7 +58,7 @@
     var ws=new WebSocket("ws://116.62.15.33:9502");
 
     ws.onopen= function () {
-        var message='{"type":"login","1":"2"}';
+        var message='{"type":"login","con":"username"}';
         ws.send(message);
     }
     ws.onmessage = function (res) {
