@@ -52,6 +52,8 @@ class LoginController extends Controller
     }
 
     public function index(){
-        return view('/index');
+        $key="yk";
+        $data=Redis::get($key);
+        return view('/index',['data'=>$data]);
     }
 }

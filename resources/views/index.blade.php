@@ -26,7 +26,7 @@
     <input type="button" value="发送" id="btn">
     <img src="./bq.png" alt="" style="width: 30px;height: 30px;margin-top: 20px;" id="bq">
     <div id="bqlist" style="width: 50%;height: auto;"></div>
-
+    <span style="display: none">{{$data}}</span>
 </div>
 <div style="width: 10%" class="c">
     <div class="onlinelist" style="border: 1px solid black;height: 50%;">粉丝在线列表</div></div>
@@ -54,7 +54,7 @@
 <script>
 
 //用户登录以后   获取用户名
-
+    var username=$("span").text();
     var ws=new WebSocket("ws://116.62.15.33:9502");
 
     ws.onopen= function () {
