@@ -61,7 +61,7 @@
 
 //用户登录以后   获取用户名
     var username=$("#aa").text();
-    console.log(username)
+    // console.log(username)
     var ws=new WebSocket("ws://116.62.15.33:9502");
 
     ws.onopen= function () {
@@ -98,7 +98,7 @@
 $(document).on("click",".liwu",function () {
     var lid=$(this).prev("span").text();
     // var username=$(this).parent('div').siblings('div').children('#aa').text();
-    console.log(username)
+    // console.log(username)
     $.ajax({
         url:"{{URL("/checkliwu")}}",
         method:"post",
