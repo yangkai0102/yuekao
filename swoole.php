@@ -11,16 +11,12 @@ $ws->on('open', function ($ws, $request) {
 
 //监听WebSocket消息事件
 $ws->on('message', function ($ws, $frame) {
-    dd($frame);
-    $redis= new Swoole\Coroutine\Redis();
-    $redis->connect('127.0.0.1',6379);
-    $key='yk';
-    $username=$redis->get($key);
-    $fram=a;
     $info=json_decode($frame->data,true);
 //    print_r($info);
     if($info['type'] =="login"){
         //swoole提供的redis客户端
+        $redis= new Swoole\Coroutine\Redis();
+        $redis->connect('127.0.0.1',6379);
         $key="online_list";
         $list=$redis->get($key);
         $userlist=json_decode($list,true);
