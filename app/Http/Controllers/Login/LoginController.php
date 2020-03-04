@@ -64,13 +64,11 @@ class LoginController extends Controller
 
         $id=$request->input('id');
         $username=$request->input('username');
-//        echo $username;
         $res=LiwuModel::where('id',$id)->first();
 
         $res1=LoginModel::where('username',$username)->first();
 //        return $res1;m
         $data=$res1['mem']+$res['mem'];
-//        return $data;
 
         $res2=LoginModel::where('username',$username)->update(['mem'=>$data]);
         echo $res2;
