@@ -26,7 +26,7 @@
     <input type="text" id="message">
     <input type="button" value="发送" id="btn">
     <div id="bqlist" style="width: 50%;height: auto;"></div>
-    <p style="display: none">{{$data}}</p>
+    <p style="display: none" id="aa">{{$data}}</p>
 </div>
 <div style="width: 10%" class="c">
     <div class="onlinelist" style="border: 1px solid black;height: 50%;">粉丝在线列表</div></div>
@@ -60,8 +60,8 @@
 <script>
 
 //用户登录以后   获取用户名
-    var username=$("p").text();
-    // console.log(username)
+    var username=$("#aa").text();
+    console.log(username)
     var ws=new WebSocket("ws://116.62.15.33:9502");
 
     ws.onopen= function () {
