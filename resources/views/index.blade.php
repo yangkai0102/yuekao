@@ -40,20 +40,20 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     var player = new Aliplayer({
-    "id": "player-con",
-    "source": "rtmp://youke.1548580932.top/myfirstvideo/video?auth_key=1583336657-0-0-336764153eb4d94d74929381c7d0bbed",
-    "width": "100%",
-    "height": "500px",
-    "autoplay": true,
-    "isLive": true,
-    "rePlay": false,
-    "playsinline": true,
-    "preload": true,
-    "controlBarVisibility": "hover",
-    "useH5Prism": true
-    }, function (player) {
-    console.log("The player is created");
-    }
+            "id": "player-con",
+            "source": "rtmp://youke.1548580932.top/myfirstvideo/video?auth_key=1583375296-0-0-62642df9a10bcdf0cdc1159642450583",
+            "width": "100%",
+            "height": "500px",
+            "autoplay": true,
+            "isLive": true,
+            "rePlay": false,
+            "playsinline": true,
+            "preload": true,
+            "controlBarVisibility": "hover",
+            "useH5Prism": true
+        }, function (player) {
+            console.log("The player is created");
+        }
     );
 </script>
 
